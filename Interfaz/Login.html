@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="principalLog.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card shadow">
+            <div class="card-body">
+                <!-- Imagen del logo centrada -->
+                <div class="logo-container">
+                    <img src="img/logo.png" alt="Logo" class="logo">
+                </div>
+                <h1 class="text-center mb-4">GraphixPro</h1>
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="loginEmail" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="loginEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Contraseña:</label>
+                        <input type="password" class="form-control" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+                </form>
+                <p id="loginMessage" class="text-danger text-center mt-3"></p>
+                <p class="text-center mt-3">¿No tienes cuenta? <a href="register.html">Crear cuenta</a></p>
+                <a href="index.html" class="btn btn-primary mt-3">Volver a Inicio</a>
+            </div>
+        </div>
+    </div>
+    <script src="/middlewares/Login.js"></script>
+</body>
+</html>

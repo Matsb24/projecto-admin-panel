@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="principalLog.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card shadow">
+            <div class="card-body">
+                <h1>Crear Cuenta</h1>
+                <form id="registerForm">
+                    <div class="mb-3">
+                        <label for="registerEmail" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="registerEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerPassword" class="form-label">Contraseña:</label>
+                        <input type="password" class="form-control" id="registerPassword" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirmar Contraseña:</label>
+                        <input type="password" class="form-control" id="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Registrar</button>
+                </form>
+                <p id="registerMessage" class="text-danger text-center mt-3"></p>
+                <p class="text-center mt-3">¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="/middlewares/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - GraphixPro</title>
+    <link rel="stylesheet" href="../principal.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../principal.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        canvas {
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex flex-column flex-md-row">
+        <div class="sidebar d-flex flex-column p-3 container-fluid">
+            <div class="logo">
+                <a class="navbar-brand" href="#">
+                    <span class="fs-5 text fw-bold">GraphixPro</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav flex-md-column flex-row justify-content-around">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Menu.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cliente.html">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="equipo.html">Equipo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <button style="color: white;" class="nav-link" id="logoutButton">Cerrar Sesión</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="main-content container mt-0">
+            <h1>Servicios</h1>
+
+            <!-- Formulario para agregar servicios -->
+            <form id="formServicio" class="mb-4 p-4 border rounded ">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="nombreServicio">Nombre del Servicio:</label>
+                        <input type="text" class="form-control" id="nombreServicio" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="descripcion">Descripción:</label>
+                        <input type="text" class="form-control" id="descripcion" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="precio">Precio:</label>
+                        <input type="number" class="form-control" id="precio" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="tiempoEstimado">Tiempo Estimado:</label>
+                        <input type="text" class="form-control" id="tiempoEstimado" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="disponibilidad">Disponibilidad:</label>
+                    <select class="form-control" id="disponibilidad" required>
+                        <option value="">Seleccione...</option>
+                        <option>Disponible</option>
+                        <option>No disponible</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Agregar Servicio</button>
+            </form>
+
+            <!-- Tabla de servicios -->
+            <div class="table-responsive">
+            <table id="tablaServicios" class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Nombre del Servicio</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Tiempo Estimado</th>
+                        <th>Disponibilidad</th>
+                        <th>Editar</th>
+                        <th>Borrar</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            </div>
+            <!-- Canvas para los gráficos -->
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <canvas id="disponibilidadServiciosChart"></canvas>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <canvas id="preciosServiciosChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vincular el archivo JavaScript para gráficos -->
+    <script type="module" src="/middlewares/Cerrar.js"></script>
+    <script type="module" src="/middlewares/servicios.js"></script>
+</body>
+</html>

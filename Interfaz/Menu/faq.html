@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - GraphixPro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../principal.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="d-flex flex-column flex-md-row">
+        <div class="sidebar d-flex flex-column p-3 container-fluid">
+            <div class="logo">
+                <a class="navbar-brand" href="#">
+                    <span class="fs-5 text fw-bold">GraphixPro</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav flex-md-column flex-row justify-content-around">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Menu.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cliente.html">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="equipo.html">Equipo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <button style="color: white;" class="nav-link" id="logoutButton">Cerrar Sesión</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main-content container mt-4">
+            <h1>Preguntas Frecuentes</h1>
+
+            <!-- Formulario para agregar una FAQ -->
+            <form id="faqForm" class="mb-4 p-4 border rounded" novalidate>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <label for="pregunta" class="form-label">Pregunta</label>
+                        <input type="text" class="form-control" id="pregunta" placeholder="Ingrese la pregunta" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="respuesta" class="form-label">Respuesta</label>
+                        <input type="text" class="form-control" id="respuesta" placeholder="Ingrese la respuesta" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="fecha" class="form-label">Última Actualización</label>
+                        <input type="date" class="form-control" id="fecha" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Agregar FAQ</button>
+            </form>
+
+            <!-- Tabla de FAQ -->
+            <div class="table-responsive">
+                <table id="tablaFAQ" class="table table-striped table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Pregunta</th>
+                            <th>Respuesta</th>
+                            <th>Última Actualización</th>
+                            <th>Editar</th>
+                            <th>Borrar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Canvas para el gráfico de líneas -->
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <canvas id="faqChart" class="w-100"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/middlewares/Cerrar.js"></script>
+    <script type="module" src="/middlewares/faq.js"></script>
+</body>
+</html>
