@@ -19,7 +19,7 @@ Este proyecto es un panel de administración web desarrollado como parte de un c
 
 # Instalación y uso
   Clonar el repositorio
-  git clone https://github.com/Matsb24/workshop-admin-dashboard.git
+  git clone https://github.com/Matsb24/proyecto-admin-panel.git
   cd workshop-admin-dashboard
   
   Instalar dependencias
